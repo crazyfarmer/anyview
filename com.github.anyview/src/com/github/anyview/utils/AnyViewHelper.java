@@ -18,9 +18,9 @@
  */
 package com.github.anyview.utils;
 
-public class AnyviewHelper {
-	
-	public boolean isSupported() {
+public class AnyViewHelper {
+
+	public static boolean isSupported() {
 		return (isWindows() || isMac() || isUnix());
 	}
 
@@ -47,4 +47,5 @@ public class AnyviewHelper {
 		// Solaris
 		return (os.indexOf("sunos") >= 0);
 	}
+
 }

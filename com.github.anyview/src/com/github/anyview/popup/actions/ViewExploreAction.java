@@ -16,13 +16,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.github.anyview.popup.actions;
 
-package com.github.anyview.preferences;
+import com.github.anyview.Activator;
 
-public class PreferenceConstants {
+public class ViewExploreAction extends BaseViewAction {
 
-	public static final String P_TARGET = "com.github.anyview.targetPreference";
-
-	public static final String P_COMMAND = "com.github.anyview.commandPreference";
-
+	@Override
+	public void initCommandAction() {
+		try {
+			commandAction = Activator.getDefault().getTarget();
+		} catch (Throwable e) {
+			Activator.log(e);
+		}
+	}
 }

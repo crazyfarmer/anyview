@@ -6,7 +6,7 @@
       <page
             class="com.github.anyview.preferences.AnyViewPreferencePage"
             id="com.github.anyview.preferences.AnyViewPreferencePage"
-            name="AnyView Preferences">
+            name="AnyView">
       </page>
    </extension>
    <extension
@@ -14,6 +14,37 @@
       <initializer
             class="com.github.anyview.preferences.PreferenceInitializer">
       </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="com.github.anyview.contribution"
+            objectClass="org.eclipse.core.runtime.IAdaptable">
+         <menu
+               icon="icon/logo_16.png"
+               id="com.github.anyview.menu"
+               label="Any View……"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="com.github.anyview.popup.actions.ViewExploreAction"
+               enablesFor="1"
+               icon="icon/file_16.png"
+               id="com.github.anyview.fileAction"
+               label="File Explore"
+               menubarPath="com.github.anyview.menu/group1">
+         </action>
+         <action
+               class="com.github.anyview.popup.actions.ViewCommandAction"
+               icon="icon/command_16.png"
+               id="com.github.anyview.commandAction"
+               label="Command Prompt"
+               menubarPath="com.github.anyview.menu/group1">
+         </action>
+      </objectContribution>
    </extension>
 
 </plugin>

@@ -11,21 +11,15 @@ public class AnyViewPreferencePage extends FieldEditorPreferencePage implements
 	public AnyViewPreferencePage() {
 		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
-		setDescription("A demonstration of a preference page implementation");
+		setDescription("Any View Preference Page\r\nSet the operating system commands to open an explorer and a command shell.");
 	}
 
 	public void createFieldEditors() {
-		addField(new DirectoryFieldEditor(PreferenceConstants.P_PATH,
-				"&Directory preference:", getFieldEditorParent()));
-		addField(new BooleanFieldEditor(PreferenceConstants.P_BOOLEAN,
-				"&An example of a boolean preference", getFieldEditorParent()));
+		addField(new StringFieldEditor(PreferenceConstants.P_TARGET,
+				"&File View", getFieldEditorParent()));
+		addField(new StringFieldEditor(PreferenceConstants.P_COMMAND,
+				"&Command View", getFieldEditorParent()));
 
-		addField(new RadioGroupFieldEditor(PreferenceConstants.P_CHOICE,
-				"An example of a multiple-choice preference", 1,
-				new String[][] { { "&Choice 1", "choice1" },
-						{ "C&hoice 2", "choice2" } }, getFieldEditorParent()));
-		addField(new StringFieldEditor(PreferenceConstants.P_STRING,
-				"A &text preference:", getFieldEditorParent()));
 	}
 
 	/*
