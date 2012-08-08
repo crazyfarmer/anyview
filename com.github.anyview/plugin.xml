@@ -23,7 +23,7 @@
          <menu
                icon="icon/logo_16.png"
                id="com.github.anyview.menu"
-               label="Any View……"
+               label="Any View…"
                path="additions">
             <separator
                   name="group1">
