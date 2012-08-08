@@ -99,7 +99,7 @@ public abstract class BaseViewAction implements IObjectActionDelegate,
 		if (selectedObject instanceof File) {
 			directory = directory.getParentFile();
 		}
-		commandAction = commandAction.trim() + " " + directory.toString();
+		commandAction = commandAction.trim() + directory.toString();
 	}
 
 	private boolean isActionAvailable() {
