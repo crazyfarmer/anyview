@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="AnyView">
+      for quick accessing resource in plugin project
+   </description>
+   <feature url="features/com.github.anyview.feature_1.0.0.201208090028.jar" id="com.github.anyview.feature" version="1.0.0.201208090028">
+      <category name="AnyView Tools"/>
+   </feature>
+   <category-def name="AnyView Tools" label="ANY VIEW"/>
+</site>
